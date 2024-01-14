@@ -45,14 +45,14 @@ onMounted(() => {
       <img src="/cover_alex_bugnon.jpeg" alt="" />
       <div class="ml-8 space-y-6">
         <h3
-          class=" mb-2 uppercase text-7xl font-light bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-violet-500">
+          class="mt-10 mb-2 uppercase text-5xl lg:text-7xl font-light bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-violet-500">
           Alex bugnon</h3>
         <p class="text-white text-2xl">Wednesday, January 17<sup>th</sup> 2024 @ 7:30 pm</p>
 
         <p><b>Raleigh Improv</b><br />1224 Parkside Main Street<br /> Cary, NC 27519</p>
 
         <div class="py-6">
-          <a class="border-2 rounded-full px-6 py-2  text-white font-bold border-gold bg-black/90"
+          <a class="border-2 rounded-full px-6 py-2  text-white font-bold border-gold bg-black/90 whitespace-nowrap"
             href="https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+alex+bugnon/13342883/">Buy
             Tickets here - 7:30PM Show</a>
         </div>
