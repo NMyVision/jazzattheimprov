@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <header class="sticky top-0 z-50">
-    <nav class="flex justify-between p-4 wrapper bg-zinc-950/80 backdrop-blur-sm">
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
+    <nav class="flex justify-between p-4 wrapper ">
       <div>
         <RouterLink class="flex gap-2 items-center" to="/">
           <img src="/man.svg" class="w-12" />
@@ -31,7 +31,7 @@
   <main class="mt-10">
     <RouterView />
   </main>
-  <footer class="border-t border-zinc-800/50 mt-20">
+  <footer class="border-t border-zinc-800/50 mt-10">
 
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
       <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">

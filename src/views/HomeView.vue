@@ -62,8 +62,8 @@ onMounted(() => {
 
   </section>
 
-  <section class="wrapper h-96 flex items-center">
-    <div class="p-20">
+  <section class="h-96 flex items-center ">
+    <div class="p-20 wrapper ">
       <h3 class="text-white font-bold mb-2 uppercase text-2xl">Latest Videos</h3>
       <p class="leading-loose">
         At Jazz at the Improv Society, our mission is twofold: to ensure that jazz never fades into obscurity and to
@@ -77,8 +77,8 @@ onMounted(() => {
     </div>
   </section>
 
-    <section class="wrapper h-96 flex items-center bg-black">
-      <div class="p-20">
+    <section class=" h-96 flex items-center bg-zinc-950">
+      <div class="p-20 wrapper">
         <h3 class="text-white font-bold mb-2 text-2xl">OUR MISSION</h3>
         <p class="leading-loose">
           At Jazz at the Improv Society, our mission is twofold: to ensure that jazz never fades into obscurity and to
