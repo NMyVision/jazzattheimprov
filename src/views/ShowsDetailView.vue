@@ -10,19 +10,27 @@ const episode = episodes.find(ep => ep.slug === id)
 
 </script>
 <template>
-  <div class="wrapper mt-4 space-y-10 mb-20" v-if="episode">
-    <div>
-      <h1 class="text-3xl font-light text-white">{{ episode?.title }}</h1>
-      <p>{{ new Date(episode.date).toDateString() }}</p>
-    </div>
+  <div class="mt-4 space-y-10 mb-20" v-if="episode">
+    <article class="bg-black">
+      <div class="wrapper pt-20 pb-10">
+        <h1 class="text-3xl font-light text-white">
+          <RouterLink to="/shows" class="text-purple-600">Shows</RouterLink> /
+          <span>{{ episode?.title }}</span>
+        </h1>
+        <p>{{ new Date(episode.date).toDateString() }}</p>
+      </div>
 
-    <iframe loading="lazy" title="Giant Steps" width="300" height="200"
-      src="https://youtu.be/QgmKb2sR_pc?si=Iy54FQ6B4VehV6SG?feature=oembed" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen></iframe>
+      <div class="wrapper pb-20">
 
+        <iframe class="w-full aspect-video rounded-lg shadow-lg "
+          src="https://www.youtube.com/embed/1SIyPCHpPPI?si=wOFWt4T4qigW85jq" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
 
-    <article>
+      </div>
+    </article>
+
+    <article class="wrapper ">
 
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div class="mx-auto max-w-2xl lg:mx-0">
@@ -76,7 +84,7 @@ const episode = episodes.find(ep => ep.slug === id)
 
 
 
-    <article>
+    <article class="wrapper ">
       <h3 class="font-bold text-2xl text-zinc-100 mb-4">Event Gallery</h3>
       <div class="flex gap-4 flex-wrap">
         <template v-for="img in episode.media?.images" :key="img">

@@ -10,8 +10,9 @@ const CLOUDINARY_URL = import.meta.VITE_APP_CLOUDINARY_URL
 </script>
 
 <template>
-  <div class="wrapper">
-    <h2 id="products-heading" class=" ">Shows</h2>
+  <div class="wrapper space-y-10">
+    <h1 class="text-3xl font-light text-white">Shows</h1>
+
 
     <div v-if="false">
       <select name="" id="">
@@ -20,8 +21,6 @@ const CLOUDINARY_URL = import.meta.VITE_APP_CLOUDINARY_URL
         <option value="2024">2024</option>
       </select>
     </div>
-
-    <pre>{{ CLOUDINARY_URL }}</pre>
 
     <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
 
