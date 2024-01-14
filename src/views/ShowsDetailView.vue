@@ -20,10 +20,11 @@ const episode = episodes.find(ep => ep.slug === id)
         <p>{{ new Date(episode.date).toDateString() }}</p>
       </div>
 
-      <div class="wrapper pb-20">
-
+      <div class="wrapper pb-20" v-if="episode.highlight">
+ 
         <iframe class="w-full aspect-video rounded-lg shadow-lg "
-          src="https://www.youtube.com/embed/1SIyPCHpPPI?si=wOFWt4T4qigW85jq" title="YouTube video player" frameborder="0"
+          :src="`https://www.youtube.com/embed/${episode.highlight}?si=wOFWt4T4qigW85jq`" title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
 
@@ -92,6 +93,5 @@ const episode = episodes.find(ep => ep.slug === id)
         </template>
       </div>
     </article>
-  </div>
-</template>
+</div></template>
 

@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <section class="relative pb-20 min-h-[600px] bg-black">
-    <div
+    <div v-if="false"
       class="absolute z-30 inset-0 overflow-hidden flex items-center justify-center min-h-[600px] transition ease-in-out delay-[2000ms] duration-[10000ms] "
       :class="entry && 'bg-black/75'">
 
@@ -30,7 +30,12 @@ onMounted(() => {
 
     </div>
     <div class="wrapper">
-      <video src="/background-lo.mp4" muted autoplay class="object-cover w-full h-full rounded-md" />
+      <iframe class="w-full aspect-video rounded-lg shadow-lg object-cover w-full h-full rounded-md"
+        src="https://www.youtube.com/embed/1SIyPCHpPPI?si=wOFWt4T4qigW85jq&autoplay=1&loop=1" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+  
     </div>
   </section>
 
@@ -77,20 +82,18 @@ onMounted(() => {
     </div>
   </section>
 
-    <section class=" h-96 flex items-center bg-zinc-950">
-      <div class="p-20 wrapper">
-        <h3 class="text-white font-bold mb-2 text-2xl">OUR MISSION</h3>
-        <p class="leading-loose">
-          At Jazz at the Improv Society, our mission is twofold: to ensure that jazz never fades into obscurity and to
-          provide a
-          platform for both legendary and emerging jazz performers to captivate audiences with their musical prowess.
-          Our society
-          is committed to preserving the authenticity of jazz, fostering innovation within the genre, and passing on the
-          rich
-          legacy of jazz improvisation to future generations.
-        </p>
-      </div>
-    </section>
-
-
+  <section class=" h-96 flex items-center bg-zinc-950">
+    <div class="p-20 wrapper">
+      <h3 class="text-white font-bold mb-2 text-2xl">OUR MISSION</h3>
+      <p class="leading-loose">
+        At Jazz at the Improv Society, our mission is twofold: to ensure that jazz never fades into obscurity and to
+        provide a
+        platform for both legendary and emerging jazz performers to captivate audiences with their musical prowess.
+        Our society
+        is committed to preserving the authenticity of jazz, fostering innovation within the genre, and passing on the
+        rich
+        legacy of jazz improvisation to future generations.
+      </p>
+    </div>
+  </section>
 </template>

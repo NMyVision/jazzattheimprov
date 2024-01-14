@@ -1,11 +1,21 @@
-
 const dataset = [
   {
-    slug: 'alex-bugnon', title: 'Alex Bugnon', image: 'cover_alex_bugnon.jpeg', date: '2024-1-17'
+    slug: 'alex-bugnon',
+    title: 'Alex Bugnon',
+    image: 'cover_alex_bugnon.jpeg',
+    date: '2024-1-17',
+    highlight: ''
   },
   {
     slug: 'kurt-whalum',
-    title: 'Kurt Whalum', image: 'cover_kurt_whalum.png', date: '2023-12-20',
+    title: 'Kurt Whalum',
+    image: 'cover_kurt_whalum.png',
+    date: '2023-12-20',
+    highlight: 'QgmKb2sR_pc',
+    bio: '',
+    social: {
+      twitter: '',
+    },
     members: [
       {
         name: 'Kurt Whalum',
@@ -57,9 +67,23 @@ const dataset = [
     }
   },
   {
-    slug: 'norman-brown',
-    title: 'Norman Brown', image: 'cover_norman_brown.png', date: '2023-10-18'
+    slug: 'jonathan-butler',
+    title: 'Jonathan Butler',
+    image: 'cover_jonathan_butler.jpg',
+    date: '2023-11-16',
+    highlight: '-H9wWuI0-38'
   },
+  {
+    slug: 'norman-brown',
+    title: 'Norman Brown',
+    image: 'cover_norman_brown.png',
+    date: '2023-10-18',
+    highlight: '',
+    bio: '',
+    social: {
+      twitter: '',
+    }
+  }
 
 ]
 
@@ -69,14 +93,16 @@ export const useMediaStore = defineStore('media', () => {
 
 
   const resolveImageUrl = (segment: string) => `https://res.cloudinary.com/dm7x6mos2/image/upload/${segment}`
-  const now = new Date()
+  const now = +new Date()
   const resolveEpisode = (ep: typeof dataset[number]) => {
 
-    const date = new Date(ep.date)
+    const date = +new Date(ep.date)
     console.log(date, now)
 
     return {
       current: (date < now) && ep.title,
+      n: now,
+      d: date.valueOf(),
       ...ep
     }
 
