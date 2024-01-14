@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { min-width: 0 }
+  html, body { @apply bg-zinc-950 text-zinc-400; }
+  .wrapper {
+    @apply mx-auto max-w-2xl px-4 sm:px-6  lg:max-w-7xl lg:px-8;
+  }
+}
