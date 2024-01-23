@@ -33,6 +33,16 @@ const router = createRouter({
           props: true
         }
       ]
+    },
+    {
+      path: '/termsandconditions',
+      name: 'terms',
+      component: () => import('../views/TermsView.vue')
+    },
+    {
+      path: '/privacypolicy',
+      name: 'privacypolicy',
+      component: () => import('../views/PrivacyView.vue')
     }
   ]
 })

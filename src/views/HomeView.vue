@@ -30,11 +30,16 @@ onMounted(() => {
 
     </div>
     <div class="wrapper">
-      <iframe class="w-full aspect-video rounded-lg shadow-lg object-cover h-full "
+      <!-- <iframe class="w-full aspect-video rounded-lg shadow-lg object-cover h-full "
         src="https://www.youtube.com/embed/1SIyPCHpPPI?si=wOFWt4T4qigW85jq&autoplay=1&loop=1" title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>   this video should go on Kirk Whalums show board-->
+      <iframe class="w-full aspect-video rounded-lg shadow-lg object-cover h-full "
+        src="https://www.youtube.com/embed/QgmKb2sR_pc?si=REpZSC-5Xsxu71dr&autoplay=1&mute=1&?start=0&end=122&rel=0" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; autoplay; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe> 
 
     </div>
   </section>
@@ -52,10 +57,13 @@ onMounted(() => {
         <p><b>Raleigh Improv</b><br />1224 Parkside Main Street<br /> Cary, NC 27519</p>
 
         <div class="py-6">
-          <a class="border-2 rounded-full px-6 py-2  text-white font-bold border-gold bg-black/90 whitespace-nowrap"
-            href="https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+alex+bugnon/13342883/">Buy
-            Tickets here - 7:30PM Show</a>
+          <a class="border-2 rounded-full px-6 py-2  text-white font-bold border-gold bg-black/90 whitespace-nowrap [transition:.6s_ease-in-out]
+                  hover:bg-[white] hover:border-[2px] hover:border-[solid] hover:border-[border-gold] hover:text-[black]"
+            href="https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+alex+bugnon/13342883/">
+            <!-- Buy Tickets For the - 7:30PM Show</a> -->
+            Buy Tickets Here</a>
         </div>
+
         <div class="pt-4">
           <iframe loading="lazy" title="Giant Steps" width="300" height="200"
             src="https://www.youtube.com/embed/1nuxmUBC35w?feature=oembed" frameborder="0"
@@ -67,10 +75,10 @@ onMounted(() => {
 
   </section>
 
-  <section class="sm:h-96 flex items-center ">
+  <section class="">
     <div class="p-20 wrapper ">
-      <h3 class="text-white font-bold mb-2 uppercase text-2xl">Latest Videos</h3>
-      <p class="leading-loose">
+      <h3 class="text-white font-bold mb-2 uppercase text-2xl">Latest Videos</h3> 
+      <!-- <p class="leading-loose">
         At Jazz at the Improv Society, our mission is twofold: to ensure that jazz never fades into obscurity and to
         provide a
         platform for both legendary and emerging jazz performers to captivate audiences with their musical prowess.
@@ -78,7 +86,19 @@ onMounted(() => {
         is committed to preserving the authenticity of jazz, fostering innovation within the genre, and passing on the
         rich
         legacy of jazz improvisation to future generations.
-      </p>
+      </p> -->
+      <div class="w-full h-[30vw] grid grid-cols-[1fr_1fr_1fr] grid-rows-[1fr] gap-[3vw] pt-[1vw]"> 
+        <div class="h-full relative">
+          <iframe class="w-full h-full object-cover object-center" width="560" height="315" src="https://www.youtube.com/embed/iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="h-full relative object-cover object-center">
+          <iframe class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/Ql1fZphvOVE?si=e6Z0uDKIqzv9n0Nx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="h-full relative object-cover object-center">
+          <iframe class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/ooA2ESfzEHo?si=eG845GA5Np8RJa_B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+    
     </div>
   </section>
 
@@ -96,4 +116,10 @@ onMounted(() => {
       </p>
     </div>
   </section>
+
 </template>
+
+<style>
+  /* @import url('./HomeViews.css'); */
+
+</style>
