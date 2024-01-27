@@ -8,9 +8,6 @@ const { episodes } = useMediaStore()
 
 onMounted (function () {
     let scrolltop1 = document.querySelector('.scrolltop');
-    let bodyheight = document.querySelector('section')
-    console.log('window inner height: ' + window.innerHeight);
-    console.log('body scroll height: ' + bodyheight?.scrollHeight);
 
     // scrolltop1?.addEventListener('click', () => window.scrollTo(0, 0));
 
@@ -21,13 +18,11 @@ onMounted (function () {
     });
 
     window.addEventListener('scroll', function () {
-        // console.log('window scroll y: should track current pos: ' + this.window.scrollY);
         if (Number(this.window.scrollY > 500)) {
             scrolltop1?.classList.add('active')
         } else {
             scrolltop1?.classList.remove('active')
         }
-        // console.log(scrolltop1?.scrollTop);
     });
 
 })
@@ -179,19 +174,11 @@ onMounted (function () {
                 <br>Telephone number: 919-339-9393
                 <br>Effective as of September 14, 2023 This is a RocketLawyer.com document.
             </p>
-
-            
-
-
-
         </div>
-        <div class="scrolltop">
+        <div class="scrolltop hover:cursor-pointer hover:bg-[slateblue] border-[3px] border-[solid] border-[slateblue] p-[1vw] rounded-[50%] w-max h-max flex justify-center items-center sticky bottom-[5vw] left-[90%] mb-[0vw] [transition:.7s_ease-in-out] opacity-0">
             <span class="material-symbols-outlined arrow">arrow_upward</span>
         </div>
     </section>
 
 </template>
 
-<style>
-@import url('../views/HomeViews.css');
-</style>

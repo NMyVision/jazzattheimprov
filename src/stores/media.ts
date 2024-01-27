@@ -1,9 +1,25 @@
 const dataset = [
   {
+    slug: 'marcus-anderson',
+    title: 'Marcus Anderson',
+    image: 'https://jazzattheimprov.com/wp-content/uploads/2024/01/Marcus-Anderson-Raleigh-flyer-15Feb24-400x600.jpg',
+    date: '2024-02-15',
+    highlight: 'v1_s-X8d8Co?si=pReU2OXOUHre1x2t',
+    bio: '',
+    social: {
+      twitter: 'https://twitter.com/mandersonsax?lang=en',
+      instagram: 'https://www.instagram.com/mandersonsax/?hl=en',
+      facebook: 'https://www.facebook.com/mandersonsax',
+      spotify:'https://open.spotify.com/artist/74w7jlHFeZ4x6cHFaHfHtf',
+      linktree:'https://linktr.ee/mandersonsax2023?utm_source=linktree_admin_share'
+    },
+    artistImage:'https://www.legere.com/wp-content/uploads/Legere-Reeds-Marcus-Anderson-1.jpg',
+  },
+  {
     slug: 'alex-bugnon',
     title: 'Alex Bugnon',
     image: 'cover_alex_bugnon.jpeg',
-    date: '2024-1-17',
+    date: '2024-01-17',
     highlight: 'ooA2ESfzEHo?si=abFrPpuhrz1QVbZF',
     bio: '',
     social: {

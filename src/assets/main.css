@@ -63,3 +63,31 @@ li.active:hover::after {
 .artist-container::-webkit-scrollbar {
   display: none;
 }
+
+.policy {
+  font-size: 1.5vw;
+  font-style: italic;
+  margin: 2vw 0 .5vw;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: slateblue;
+  font-family: 'Times New Roman', Times, serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.policyinfo {
+  font-size: 1.3vw;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.scrolltop.active {
+  opacity: 1;
+}
+
+#mobile-menu.active {
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
