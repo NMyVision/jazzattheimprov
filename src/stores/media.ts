@@ -4,37 +4,43 @@ const dataset = [
     title: 'Alex Bugnon',
     image: 'cover_alex_bugnon.jpeg',
     date: '2024-1-17',
-    highlight: ''
-  },
-  {
-    slug: 'kurt-whalum',
-    title: 'Kurt Whalum',
-    image: 'cover_kurt_whalum.png',
-    date: '2023-12-20',
-    highlight: 'QgmKb2sR_pc',
+    highlight: 'ooA2ESfzEHo?si=abFrPpuhrz1QVbZF',
     bio: '',
     social: {
-      twitter: '',
+      twitter: 'https://twitter.com/alexbugnon',
+      instagram: 'https://www.instagram.com/alexbugnon/?hl=en'
+    },
+  },
+  {
+    slug: 'kirk-whalum',
+    title: 'Kirk Whalum',
+    image: 'cover_kurt_whalum.png',
+    date: '2023-12-20',
+    highlight: '1SIyPCHpPPI?si=wOFWt4T4qigW85jq',
+    bio: '',
+    social: {
+      twitter: 'https://twitter.com/KirkWhalum',
+      instagram: 'https://www.instagram.com/kirkwhalum/?hl=en'
     },
     members: [
       {
-        name: 'Kurt Whalum',
+        name: 'Kirk Whalum',
         instrument: 'Saxaphone',
-        social: { twitter: '', instagram: '' },
+        social: { twitter: 'https://twitter.com/KirkWhalum', instagram: 'https://www.instagram.com/kirkwhalum/?hl=en' },
         avatar: 'https://res.cloudinary.com/dm7x6mos2/image/upload/w_500,ar_1:1,c_fill,g_face/v1705205198/raleigh/2023-12/RLC_2320_Large_iej8cl.jpg',
         primary: true
       },
       {
         name: 'Norman Brown',
         instrument: 'Guitar',
-        social: { twitter: '', instagram: '' },
+        social: { twitter: 'https://twitter.com/norman_brown', instagram: 'https://www.instagram.com/normanticmusic/' },
         avatar: 'https://res.cloudinary.com/dm7x6mos2/image/upload/w_500,ar_1:1,c_fill,g_face/v1705205199/raleigh/2023-12/RLC_2595_Large_eqrpes.jpg',
         primary: false
       },
       {
         name: 'Alex Bugnon',
         instrument: 'Piano',
-        social: { twitter: '', instagram: '' },
+        social: { twitter: 'https://twitter.com/alexbugnon', instagram: 'https://www.instagram.com/alexbugnon/?hl=en' },
         avatar: '',
         primary: false
       },
@@ -48,7 +54,7 @@ const dataset = [
       {
         name: 'Marcus Finnie',
         instrument: 'Drums',
-        social: { twitter: '', instagram: '' },
+        social: { twitter: 'https://twitter.com/MarcusFinnie', instagram: 'https://www.instagram.com/stixfinnie/' },
         avatar: '',
         primary: false
       },
@@ -71,17 +77,23 @@ const dataset = [
     title: 'Jonathan Butler',
     image: 'cover_jonathan_butler.jpg',
     date: '2023-11-16',
-    highlight: '-H9wWuI0-38'
+    highlight: '-H9wWuI0-38',
+    bio: '',
+    social: {
+      twitter: 'https://twitter.com/jbutlerguitar',
+      instagram: 'https://www.instagram.com/jonathankennethbutler/?hl=en'
+    }
   },
   {
     slug: 'norman-brown',
     title: 'Norman Brown',
     image: 'cover_norman_brown.png',
     date: '2023-10-18',
-    highlight: '',
+    highlight: 'cyltpaGwFhM?si=Lv5tCNV6c0S-6Poz',
     bio: '',
     social: {
-      twitter: '',
+      twitter: 'https://twitter.com/norman_brown',
+      instagram: 'https://www.instagram.com/normanticmusic/'
     }
   }
 
