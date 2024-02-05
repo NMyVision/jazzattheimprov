@@ -31,7 +31,7 @@ const { episodes } = useMediaStore()
 
 
     </div>
-    <div class="w-[85%] h-[50vw] mt-[5vw] mx-[auto] my-[0]">
+    <div class="w-4/5 h-[50vh] mt-[5vw] mx-auto">
       <iframe class="w-full aspect-video rounded-lg shadow-lg object-cover h-full "
         src="https://www.youtube.com/embed/v1_s-X8d8Co?autoplay=1&mute=1&?start=0&end=122&rel=0"
         title="YouTube video player" frameborder="0"
