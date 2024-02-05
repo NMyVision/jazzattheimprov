@@ -3,6 +3,10 @@ import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -33,6 +37,16 @@ const router = createRouter({
           props: true
         }
       ]
+    },
+    {
+      path: '/termsandconditions',
+      name: 'terms',
+      component: () => import('../views/TermsView.vue')
+    },
+    {
+      path: '/privacypolicy',
+      name: 'privacypolicy',
+      component: () => import('../views/PrivacyView.vue')
     }
   ]
 })
