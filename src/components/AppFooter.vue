@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import AppHeader from './components/AppHeader.vue';
 import AppLink from '@/components/AppLink.vue'
 
 import IconFacebook from './icons/IconFacebook.vue';

@@ -85,13 +85,13 @@ const episode = episodes.find(ep => ep.slug === id)
       </div>
     </article>
 
-    <article class="wrapper ">
+    <article class="wrapper " v-if="false">
 
-      <!-- carousel active -->
+
       <div class="relative m-auto mb-[7vw]">
         <div class="carouselactive" v-if="Number(episode.members?.length) > 1">
           <!-- Carousel will show if there are multiple artist performing  ... would ideally only need this container, but header/footer were not activating when there was only one artist-->
-          <div class="mySlides fade h-[40vw] flex" v-for="(artist, index) in episode.members">
+          <div class="mySlides fade h-[40vw] flex" v-for="(artist) in episode.members" :key="artist">
             <div
               class="border-[2px] border-[solid] border-[white] h-full flex justify-center items-center gap-[1vw] p-[1vw]">
               <!--Container used to hold carousel elements-->
