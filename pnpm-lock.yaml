@@ -11,6 +11,9 @@ dependencies:
   '@cloudinary/vue':
     specifier: ^1.11.2
     version: 1.11.2
+  '@headlessui/vue':
+    specifier: ^1.7.18
+    version: 1.7.18(vue@3.4.13)
   '@vueuse/core':
     specifier: ^10.7.2
     version: 10.7.2(vue@3.4.13)
@@ -666,6 +669,16 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@headlessui/vue@1.7.18(vue@3.4.13):
+    resolution: {integrity: sha512-N9EUJY0sHhuJQ81oQlk+vmB80NwUXsyJjxOaBrzUyO+VHIZz7v/ffFICAlrtM4TxZaZFMCzehe74yEPSqkEJ9g==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@tanstack/vue-virtual': 3.0.4(vue@3.4.13)
+      vue: 3.4.13(typescript@5.3.3)
+    dev: false
+
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -881,6 +894,19 @@ packages:
   /@rushstack/eslint-patch@1.6.1:
     resolution: {integrity: sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==}
     dev: true
+
+  /@tanstack/virtual-core@3.0.0:
+    resolution: {integrity: sha512-SYXOBTjJb05rXa2vl55TTwO40A6wKu0R5i1qQwhJYNDIqaIGF7D0HsLw+pJAyi2OvntlEIVusx3xtbbgSUi6zg==}
+    dev: false
+
+  /@tanstack/vue-virtual@3.0.4(vue@3.4.13):
+    resolution: {integrity: sha512-SDk3n+dMZnAXEAx+HZ0wQwBN00Ne7Qk4z29QnawJy6jzOOpoajt7Mm6gIEERin1D4ALxW5WpuDqhlnV2TNFQ+A==}
+    peerDependencies:
+      vue: ^2.7.0 || ^3.0.0
+    dependencies:
+      '@tanstack/virtual-core': 3.0.0
+      vue: 3.4.13(typescript@5.3.3)
+    dev: false
 
   /@tsconfig/node18@18.2.2:
     resolution: {integrity: sha512-d6McJeGsuoRlwWZmVIeE8CUA27lu6jLjvv1JzqmpsytOYYbVi1tHZEnwCNVOXnj4pyLvneZlFlpXUK+X9wBWyw==}

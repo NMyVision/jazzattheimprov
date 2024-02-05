@@ -1,19 +1,26 @@
+import { useDateFormat, useNow } from '@vueuse/core'
+
 const dataset = [
+  {
+    slug: 'march-show',
+    date: '2024-03-14',
+  },
   {
     slug: 'marcus-anderson',
     title: 'Marcus Anderson',
-    image: 'https://jazzattheimprov.com/wp-content/uploads/2024/01/Marcus-Anderson-Raleigh-flyer-15Feb24-400x600.jpg',
+    subtitle: 'World Renowned Saxaphonist',
+    image: 'cover_marcus_anderson.jpeg',
     date: '2024-02-15',
-    highlight: 'v1_s-X8d8Co?si=pReU2OXOUHre1x2t',
+    highlight: 'v1_s-X8d8Co',
     bio: '',
     social: {
-      twitter: 'https://twitter.com/mandersonsax?lang=en',
-      instagram: 'https://www.instagram.com/mandersonsax/?hl=en',
+      twitter: 'https://twitter.com/mandersonsax',
+      instagram: 'https://www.instagram.com/mandersonsax',
       facebook: 'https://www.facebook.com/mandersonsax',
-      spotify:'https://open.spotify.com/artist/74w7jlHFeZ4x6cHFaHfHtf',
-      linktree:'https://linktr.ee/mandersonsax2023?utm_source=linktree_admin_share'
+      spotify: 'https://open.spotify.com/artist/74w7jlHFeZ4x6cHFaHfHtf',
+      linktree: 'https://linktr.ee/mandersonsax2023?utm_source=linktree_admin_share'
     },
-    artistImage:'https://www.legere.com/wp-content/uploads/Legere-Reeds-Marcus-Anderson-1.jpg',
+    artistImage: 'https://www.legere.com/wp-content/uploads/Legere-Reeds-Marcus-Anderson-1.jpg',
   },
   {
     slug: 'alex-bugnon',
@@ -36,25 +43,12 @@ const dataset = [
     bio: '',
     social: {
       twitter: 'https://twitter.com/KirkWhalum',
-      instagram: 'https://www.instagram.com/kirkwhalum/?hl=en'
-    },
-    artistImage:'https://i.scdn.co/image/84a6a275fbcc5d726c061d06ec84b9e2eff8790c',
-  },
-  {
-    slug: 'kirk-whalum',
-    title: 'Kirk Whalum',
-    image: 'cover_kurt_whalum.png',
-    date: '2023-12-20',
-    highlight: '1SIyPCHpPPI?si=wOFWt4T4qigW85jq',
-    bio: '',
-    social: {
-      twitter: 'https://twitter.com/KirkWhalum',
       instagram: 'https://www.instagram.com/kirkwhalum/?hl=en',
       facebook: 'https://www.facebook.com/KirkWhalum',
-      spotify:'https://open.spotify.com/artist/6v2VjBVPcGVbBqJrUWYiG1?si=lb1ub_DNSZG7PM5FnzSvHg&nd=1&dlsi=adc69645660a435e',
-      linktree:'https://linktr.ee/kirkwhalum'
+      spotify: 'https://open.spotify.com/artist/6v2VjBVPcGVbBqJrUWYiG1?si=lb1ub_DNSZG7PM5FnzSvHg&nd=1&dlsi=adc69645660a435e',
+      linktree: 'https://linktr.ee/kirkwhalum'
     },
-    artistImage:'https://images.squarespace-cdn.com/content/v1/5a4ce01faeb625bdfcc0e2bb/fa9c164d-a65a-438a-b887-449a8e308504/Kirk%2BWhalum.jpg',
+    artistImage: 'https://images.squarespace-cdn.com/content/v1/5a4ce01faeb625bdfcc0e2bb/fa9c164d-a65a-438a-b887-449a8e308504/Kirk%2BWhalum.jpg',
     media: {
       prefix: '',
       images: [
@@ -99,24 +93,38 @@ export type Episode = typeof dataset[1]
 
 export const useMediaStore = defineStore('media', () => {
 
-
+  const currentYM = useDateFormat(useNow(), 'YYYYMM')
   const resolveImageUrl = (segment: string) => `https://res.cloudinary.com/dm7x6mos2/image/upload/${segment}`
-  const now = +new Date()
+  const now = new Date()
+
   const resolveEpisode = (ep: typeof dataset[number]) => {
 
-    const date = +new Date(ep.date)
-    console.log(date, now)
-
+    const eq = (a: string | number, b: string | number) => a === b ? 0 : a > b ? 1 : -1
+    const date = new Date(ep.date)
+    const epYM = useDateFormat(date, 'YYYYMM')
+    console.log(date, now, now.getMonth())
+    const epMonth = new Date(ep.date).getMonth() + 1
     return {
-      current: (date < now) && ep.title,
+      epYM, currentYM,
+      ym: eq(epYM.value, currentYM.value),
+      current: (+date > +now),
       n: now,
       d: date.valueOf(),
+      month: epMonth,
+      dateeq: eq(date, +now),
+      isCurrentMonth: eq(now.getMonth() + 1, epMonth),
       ...ep
     }
+
+
 
   }
 
   const episodes = dataset.map(resolveEpisode)
 
-  return { episodes, resolveImageUrl }
+  const upcoming = episodes.filter(ep => ep.ym > 0)[0]
+  const current = episodes.filter(ep => ep.ym === 0)[0] ?? {}
+  const past = episodes.filter(ep => ep.ym < 0)
+
+  return { episodes, resolveImageUrl, upcoming, current, past }
 })
