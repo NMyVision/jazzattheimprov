@@ -53,10 +53,10 @@ onMounted (function () {
         </div>
       </div>
     </div>
-  
+
     <div class="artist-container w-[95%] h-[4%] max-h-[max-content] overflow-x-scroll p-[1vw] mx-[auto] my-[0]"> <!-- container used to show previous events.. there is a limit on how much it shows so there is a scroll function for past shows -->
       <h2 class="absolute text-[1.3vw] text-[white] font-bold">Previous Shows</h2>
-      <div class="w-max h-full flex flex-row mb-[2vw] mt-[2.5vw]"> 
+      <div class="w-max h-full flex flex-row mb-[2vw] mt-[2.5vw]">
         <div class="display ml-[1vw] relative first:ml-[-1.5vw]" v-for="ep in episodes" :key="ep.title">
           <div class="h-[25vw] w-[19.5vw] ml-[1vw] relative first:ml-0" v-if="new Date().toJSON().slice(0,10) > ep.date" > <!-- for loop to display all of the shows mentioned in media file -->
             <RouterLink :to="{ name: 'shows-detail', params: { id: ep?.slug ?? '' } }" class="group">

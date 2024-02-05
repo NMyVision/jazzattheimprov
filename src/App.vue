@@ -4,7 +4,7 @@ onMounted ( function () {
   console.log(document.getElementById('mobile-menu'));
   console.log(document.querySelector('.sizeval'))
   console.log(window.innerWidth)
-  
+
   var dropdown = document.querySelector('.sizeval');
 
   dropdown?.addEventListener('click',function () {
@@ -22,46 +22,28 @@ onMounted ( function () {
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm md:mb-[1vw] sm:mb-[3vw]">
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm">
 
-    <div class="relative w-full h-[8vw] flex justify-center items-center md:visible">
+    <div class="relative w-full h-[8vw] flex justify-center items-center">
       <div class="w-full flex justify-between items-center px-[4vw] py-[0] h-full">
-        <RouterLink to="/"> 
+        <RouterLink to="/"> <!-- clicking on title or image in header now links back to the home page -->
           <div class="text-[1.2vw] tracking-[.5px] flex justify-center items-center hover:cursor-pointer">
               <img src="/man.svg" class="h-[3vw] w-[3vw] mr-[1.5vw]"/>
               <h3 class="text-white/90 font-light text-[1.7vw]"><span
             class="font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-violet-500">Smooth Jazz</span> at The Improv</h3>
           </div>
         </RouterLink>
-          <div class="headerlinks invisible sm:invisible md:visible lg:visible xl:visible">
-            <ul class="list-none inline-flex justify-around w-[25vw]">
-                <li class="active ml-[.5vw] mt-[.5vw] text-[1.4vw] text-white/90 font-light hover:cursor-pointer after:content-[''] after:bg-[white] after:w-[0%] after:h-[.1vw] after:block after:m-auto after:mt-[.2vw] after:hover:w-[100%] after:[transition:.7s_ease-in-out]  bg-none">
+            <ul class="list-none inline-flex justify-around justify-center w-[25vw]">
+                <li class="active ml-[.5vw] mt-[.5vw] text-[1.25vw] text-white/90 font-light hover:cursor-pointer after:content-[''] after:bg-[white] after:w-[0%] after:h-[.1vw] after:block after:m-auto after:mt-[.2vw] after:hover:w-[100%] after:[transition:.7s_ease-in-out]  bg-none">
                   <RouterLink to="/">Memberships</RouterLink>
                 </li>
-                <li class="ml-[.5vw] mt-[.5vw] text-[1.3vw] text-white/90 font-light hover:cursor-pointer after:content-[''] after:bg-[white] after:w-[0%] after:h-[.1vw] after:block after:m-auto after:mt-[.2vw] after:hover:w-[100%] after:[transition:.7s_ease-in-out]">
+                <li class="ml-[.5vw] mt-[.5vw] text-[1.25vw] text-white/90 font-light hover:cursor-pointer after:content-[''] after:bg-[white] after:w-[0%] after:h-[.1vw] after:block after:m-auto after:mt-[.2vw] after:hover:w-[100%] after:[transition:.7s_ease-in-out]">
                   <RouterLink to="/shows">Shows</RouterLink>
                 </li>
-                <li class="ml-[.5vw] mt-[.5vw] text-[1.3vw] text-white/90 font-light hover:cursor-pointer after:content-[''] after:bg-[white] after:w-[0%] after:h-[.1vw] after:block after:m-auto after:mt-[.2vw] after:hover:w-[100%] after:[transition:.7s_ease-in-out]">
-                  <RouterLink to="/shows">Contact Us</RouterLink> 
+                <li class="ml-[.5vw] mt-[.5vw] text-[1.25vw] text-white/90 font-light hover:cursor-pointer after:content-[''] after:bg-[white] after:w-[0%] after:h-[.1vw] after:block after:m-auto after:mt-[.2vw] after:hover:w-[100%] after:[transition:.7s_ease-in-out]">
+                  <RouterLink to="/shows">Contact Us</RouterLink> <!-- Still links to the shows, would need another page -->
                 </li>
             </ul>
-          </div>
-          <div class="-mr-2 flex flex-col md:hidden sizeval">
-          <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white  " aria-controls="mobile-menu" aria-expanded="false">
-            <span class="absolute right-0"></span>
-            <span class="sr-only">Open main menu</span>
-            <svg class="block h-[2vw] w-[2vw]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-          <div class="md:hidden" id="mobile-menu">
-                <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                  <RouterLink to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block text-[1.3vw]" aria-current="page">Memberships</RouterLink>
-                  <RouterLink to="/shows" class="text-gray-300 hover:bg-gray-700 hover:text-white block text-[1.3vw]">Shows</RouterLink>
-                  <RouterLink to="/shows" class="text-gray-300 hover:bg-gray-700 hover:text-white block text-[1.3vw]">Contact Us</RouterLink> 
-                </div>
-            </div>
-        </div>
         </div>
     </div>
 
@@ -106,7 +88,7 @@ onMounted ( function () {
         </li>
       </ul>
     </nav> -->
-  
+
   </header>
 
 
@@ -168,7 +150,7 @@ onMounted ( function () {
             <path
               d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
           </svg>
-        </a> 
+        </a>
         <a href="#" class="text-gray-400 hover:text-gray-500">
           <span class="sr-only">GitHub</span>
           <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

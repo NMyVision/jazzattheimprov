@@ -36,7 +36,7 @@ onMounted(() => {
           src="https://www.youtube.com/embed/QgmKb2sR_pc?si=REpZSC-5Xsxu71dr&autoplay=1&mute=1&?start=0&end=122&rel=0" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; clipboard-write; encrypted-media; autoplay; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe> 
+          allowfullscreen></iframe>
       </div>
   </section>
 
@@ -70,7 +70,7 @@ onMounted(() => {
 
   <section class="">
     <div class="p-20 wrapper">
-      <h3 class="text-white font-bold mb-2 uppercase text-2xl">Latest Videos</h3> 
+      <h3 class="text-white font-bold mb-2 uppercase text-2xl">Latest Videos</h3>
       <!-- <p class="leading-loose">
         At Jazz at the Improv Society, our mission is twofold: to ensure that jazz never fades into obscurity and to
         provide a
@@ -80,7 +80,7 @@ onMounted(() => {
         rich
         legacy of jazz improvisation to future generations.
       </p> -->
-      <div class="w-full h-[30vw] grid grid-cols-[1fr_1fr_1fr] grid-rows-[1fr] gap-[3vw] pt-[1vw]"> 
+      <div class="w-full h-[30vw] grid grid-cols-[1fr_1fr_1fr] grid-rows-[1fr] gap-[3vw] pt-[1vw]">
         <div class="h-full relative">
           <iframe class="w-full h-full object-cover object-center" width="560" height="315" src="https://www.youtube.com/embed/iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
@@ -91,7 +91,7 @@ onMounted(() => {
           <iframe class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/ooA2ESfzEHo?si=eG845GA5Np8RJa_B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
-    
+
     </div>
   </section>
 
@@ -109,6 +109,7 @@ onMounted(() => {
       </p>
     </div>
   </section>
+
 
 </template>
 

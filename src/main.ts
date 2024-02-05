@@ -14,8 +14,8 @@ app.use(router)
 app.mount('#app')
 
 window.addEventListener("load", function () {
-    var navElements = document.querySelectorAll('li');
-    for ( var i = 0; i < navElements.length; i++ ) (function(i) { 
+    const navElements = document.querySelectorAll('li');
+    for ( let i = 0; i < navElements.length; i++ ) (function(i) {
         navElements[i].onclick = function() {
             navElements.forEach(element => {
                 element.classList.remove('active');
@@ -38,5 +38,5 @@ window.addEventListener("load", function () {
     if (this.window.location.pathname == '/') {
         navElements[0].classList.add('active');
     }
-    
+
 })
