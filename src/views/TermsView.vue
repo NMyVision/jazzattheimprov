@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import PageArticle from '@/components/PageArticle.vue'
-onMounted(function () {
-    let scrolltop1 = document.querySelector('.scrolltop');
-    scrolltop1?.addEventListener('click', function () {
-        window.scrollTo(0, 0)
-    });
-    window.addEventListener('scroll', function () {
-        if (Number(this.window.scrollY > 500)) {
-            scrolltop1?.classList.add('active')
-        } else {
-            scrolltop1?.classList.remove('active')
-        }
-    });
+// TODO: add scrolltop functionality
+// we should be able to use a simple anchor tag to scroll to the top of the page
+// onMounted(function () {
+//     let scrolltop1 = document.querySelector('.scrolltop');
+//     scrolltop1?.addEventListener('click', function () {
+//         window.scrollTo(0, 0)
+//     });
+//     window.addEventListener('scroll', function () {
+//         if (Number(this.window.scrollY > 500)) {
+//             scrolltop1?.classList.add('active')
+//         } else {
+//             scrolltop1?.classList.remove('active')
+//         }
+//     });
 
-})
+// })
 
 </script>
 

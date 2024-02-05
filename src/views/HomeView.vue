@@ -48,13 +48,13 @@ const { episodes } = useMediaStore()
         <h3
           class="mt-10 mb-2 uppercase text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-violet-500 font-bold">
           {{ episodes[0].title }}</h3>
-        <p class="text-white text-2xl">Thursday, February 15<sup>th</sup> 2024 @ 7:30 pm</p>
+        <p class="text-white text-2xl lg:text-3xl font-bold">Thursday, February 15<sup>th</sup> @ 7:30 pm</p>
 
-        <p><b>Raleigh Improv</b><br />1224 Parkside Main Street<br /> Cary, NC 27519</p>
+        <p class="text-purple-300 text-2xl lg:text-3xl font-light"><b class="mb-1 block">Raleigh Improv</b>1224 Parkside Main Street<br /> Cary, NC 27519</p>
 
         <div class="py-6">
           <a class="border-2 rounded-full px-6 py-2  text-white font-bold border-gold bg-black/90 whitespace-nowrap [transition:.6s_ease-in-out]
-                  hover:bg-[white] hover:border-[2px] hover:border-[border-gold] hover:text-[black]"
+                  hover:bg-[white] hover:border-[2px] hover:border-[border-gold] hover:text-black"
             href="https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+marcus+anderson/13449433/"
             target="_blank">
             Buy Tickets Here</a>
@@ -83,7 +83,7 @@ const { episodes } = useMediaStore()
         rich
         legacy of jazz improvisation to future generations.
       </p> -->
-      <div class="w-full h-[30vw] grid grid-cols-[1fr_1fr_1fr] grid-rows-[1fr] gap-[3vw] pt-[1vw]">
+      <div class="w-full grid sm:grid-cols-3 h-96 gap-10">
         <div class="h-full relative">
           <iframe class="w-full h-full object-cover object-center" width="560" height="315"
             src="https://www.youtube.com/embed/iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl" title="YouTube video player"
