@@ -17,10 +17,10 @@ const link = 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+present
         <div class="md:w-2/5">
           <img src="../../assets/RickBraun_20240417.jpeg" alt="Rick Braun" class="mx-auto h-full w-full max-w-screen-sm object-cover" />
         </div>
-        <div class="space-y-4 text-xl text-purple-400 md:w-3/5">
-          <p class="uppercase">upcoming concert</p>
+        <div class="space-y-4 text-xl text-indigo-700 md:w-3/5">
+          <p class="uppercase text-sm">upcoming concert</p>
 
-          <h2 class="bg-gradient-to-r from-indigo-500 to-violet-500 bg-clip-text text-7xl font-light text-transparent">{{ data.name }}</h2>
+          <h2 class="bg-white bg-clip-text text-7xl font-light text-transparent">{{ data.name }}</h2>
           <p class="text-yellow-500">
             {{ data.date }}<br />
             {{ data.location }}
