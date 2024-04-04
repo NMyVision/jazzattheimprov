@@ -9,4 +9,14 @@
   #app {
     @apply flex min-h-dvh flex-col;
   }
+
+  .gradient-border {
+    --background: '30 41 59';
+    --highlight: '255 255 255';
+
+    border: 1px solid transparent;
+    background:
+      padding-box linear-gradient(rgb(var(--background)), rgb(var(--background))),
+      border-box linear-gradient(rgb(var(--highlight)), rgb(var(--highlight) / 0.1));
+  }
 }

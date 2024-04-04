@@ -6,6 +6,7 @@ import Video from './views/partials/Video.vue'
 import Carousel from './views/partials/Carousel.vue'
 import Mission from './views/partials/Mission.vue'
 import LatestVideos from './views/partials/LatestVideos.vue'
+import Upcoming from './views/partials/Upcoming.vue'
 
 // type Props = { }
 // const { } = defineProps<Props>()
@@ -16,6 +17,7 @@ import LatestVideos from './views/partials/LatestVideos.vue'
   <Header />
   <Video />
   <Mission />
+  <Upcoming />
   <Carousel />
   <LatestVideos />
   <Sponsors />
