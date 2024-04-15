@@ -2,7 +2,7 @@
 // type Props = { }
 // const { } = defineProps<Props>()
 // const emits = defineEmits()
-const videos = ['P6ltgDqFytU?si=IIhAkJHZUQGzm6FC', '_tXqBNuDcyk?si=HT5tGcWVQEi-e9JU', 'iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl' /*, 'Ql1fZphvOVE?si=e6Z0uDKIqzv9n0Nx'*/]
+const videos = ['v7gPUHqLEvg?si=JOUwKjdwhADAyow6','P6ltgDqFytU?si=IIhAkJHZUQGzm6FC', '_tXqBNuDcyk?si=HT5tGcWVQEi-e9JU'] //, 'iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl' /*, 'Ql1fZphvOVE?si=e6Z0uDKIqzv9n0Nx'*/]
 </script>
 
 <template>
