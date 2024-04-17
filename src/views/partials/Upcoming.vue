@@ -17,7 +17,7 @@ const data = [
     location: '1224 Parkside Main Street Cary, NC 27519',
     image: '/PiecesOfADream_20240515.jpeg',
     css: '',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+rick+braun/13518773/'
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/13412154/'
   }
 ]
 </script>
