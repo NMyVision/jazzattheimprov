@@ -3,20 +3,20 @@
 // const { } = defineProps<Props>()
 // const emits = defineEmits()
 const data = [
-  {
-    name: 'Rick Braun',
-    date: 'April 17, 2024',
-    location: '1224 Parkside Main Street Cary, NC 27519',
-    image: '/RickBraun_20240417.jpeg',
-    css: 'order-1',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+rick+braun/13518773/'
-  },
+  // {
+  //   name: 'Rick Braun',
+  //   date: 'April 17, 2024',
+  //   location: '1224 Parkside Main Street Cary, NC 27519',
+  //   image: '/RickBraun_20240417.jpeg',
+  //   css: 'order-1',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+rick+braun/13518773/'
+  // },
   {
     name: 'Pieces of a Dream',
     date: 'May 15, 2024',
     location: '1224 Parkside Main Street Cary, NC 27519',
     image: '/PiecesOfADream_20240515.jpeg',
-    css: '',
+    css: 'order-1',
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/13412154/'
   }
 ]
