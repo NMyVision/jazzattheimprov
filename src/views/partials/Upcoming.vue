@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import VimeoVideoPlayer from '@/components/VimeoVideoPlayer.vue';
+
 // type Props = { }
 // const { } = defineProps<Props>()
 // const emits = defineEmits()
@@ -17,7 +19,8 @@ const data = [
     location: '1224 Parkside Main Street Cary, NC 27519',
     image: '/PiecesOfADream_20240515.jpeg',
     css: 'order-1',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/13412154/'
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/13412154/',
+    videoId: 937110802
   }
 ]
 </script>
@@ -41,6 +44,9 @@ const data = [
             <p class=""></p>
             <div class="pt-6">
               <a :href="item.link" target="_blank" class="block w-full rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 md:inline-block md:w-auto">Buy Ticket</a>
+            </div>
+            <div class="mt-8">
+              <VimeoVideoPlayer :videoId="item.videoId" :title="item.name" />
             </div>
           </div>
         </div>
