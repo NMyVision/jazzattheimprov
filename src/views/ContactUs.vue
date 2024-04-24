@@ -27,7 +27,7 @@ const onSubmit = async (e: Event) => {
 </script>
 
 <template>
-  <div class="relative isolate border-y border-white/10 bg-[url('crowd-background.jpg')] bg-cover">
+  <div class="relative isolate border-y border-white/10 bg-[url('/crowd-background.jpg')] bg-cover">
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
       <div class="absolute inset-y-0 right-0 z-10 w-full bg-indigo-1000/90 lg:w-1/2"></div>
       <div class="relative z-20 px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
