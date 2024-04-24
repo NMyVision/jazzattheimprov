@@ -2,8 +2,10 @@
 import { useGoogleForm } from '@/useGoogleForm'
 import CompanyInfoGrid from './partials/CompanyInfoGrid.vue'
 
-const deploy = import.meta.env.VITE_GOOGLE_DEPLOY_KEY
+const deploy = import.meta.env.VITE_GOOGLE_DEPLOY_KEY || ''
 const url = `https://script.google.com/macros/s/${deploy}/exec`
+//const url = "http://localhost:9000"
+
 const { execute, isLoading, isError, isSuccess } = useGoogleForm(url)
 
 const onSubmit = async (e: Event) => {
@@ -65,19 +67,19 @@ const onSubmit = async (e: Event) => {
             <div>
               <label for="name" class="block text-sm font-semibold leading-6 text-white">Name</label>
               <div class="mt-2.5">
-                <input type="text" value="Matt G" name="name" id="name" autocomplete="full-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                <input type="text" value="" name="name" id="name" autocomplete="full-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div>
               <label for="phone" class="block text-sm font-semibold leading-6 text-white">Phone number</label>
               <div class="mt-2.5">
-                <input type="tel" value="704 600 1234" name="phone" id="phone" autocomplete="tel" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                <input type="tel" value="" name="phone" id="phone" autocomplete="tel" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="sm:col-span-2">
               <label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
               <div class="mt-2.5">
-                <input type="email" value="mail@example.com" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                <input type="email" value="" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="sm:col-span-2">
