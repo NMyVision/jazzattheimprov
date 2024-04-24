@@ -67,7 +67,7 @@ const onSubmit = async (e: Event) => {
             <div>
               <label for="name" class="block text-sm font-semibold leading-6 text-white">Name</label>
               <div class="mt-2.5">
-                <input type="text" value="" name="name" id="name" autocomplete="full-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                <input type="text" required value="" name="name" id="name" autocomplete="full-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div>
@@ -85,7 +85,7 @@ const onSubmit = async (e: Event) => {
             <div class="sm:col-span-2">
               <label for="message" class="block text-sm font-semibold leading-6 text-white">Message</label>
               <div class="mt-2.5">
-                <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
+                <textarea required name="message" id="message" rows="4" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="hidden sm:col-span-2">
