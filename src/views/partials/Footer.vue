@@ -23,7 +23,7 @@ const navigation = {
   main: [
     { name: 'Home', to: { name: 'home' } },
     { name: 'Terms & Conditions', to: { name: 'terms-of-service' } },
-    { name: 'Contact', to: { name: 'contact-us' } }
+    { name: 'Contact Us', to: { name: 'contact-us' } }
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },
