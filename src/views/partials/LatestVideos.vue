@@ -3,7 +3,7 @@ import Carousel from 'primevue/carousel'
 // type Props = { }
 // const { } = defineProps<Props>()
 // const emits = defineEmits()
-const videos = ['pn4Fxg5nFTA?si=O7CLFIdCV13BF_A2', 'v7gPUHqLEvg?si=JOUwKjdwhADAyow6', 'P6ltgDqFytU?si=IIhAkJHZUQGzm6FC', '_tXqBNuDcyk?si=HT5tGcWVQEi-e9JU', 'iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl', 'Ql1fZphvOVE?si=e6Z0uDKIqzv9n0Nx']
+const videos = ['BikqoEpgt7w?si=ygB9CFhuMHyzetd6', 'v7gPUHqLEvg?si=JOUwKjdwhADAyow6', 'P6ltgDqFytU?si=IIhAkJHZUQGzm6FC', '_tXqBNuDcyk?si=HT5tGcWVQEi-e9JU', 'iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl', 'Ql1fZphvOVE?si=e6Z0uDKIqzv9n0Nx']
 
 const responsiveOptions = ref([
   {
