@@ -1,15 +1,15 @@
 <template>
-  <footer class="bg-indigo-1000 dark:bg-black">
+  <footer class="bg-indigo-1000">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
       <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
         <div v-for="item in navigation.main" :key="item.name" class="pb-6">
-          <a :href="item.href" class=" text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }}</a>
+          <RouterLink :to="item.to" class="text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }} </RouterLink>
         </div>
       </nav>
       <div class="mt-10 flex justify-center space-x-10">
-        <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-200 hover:text-purple-600 group">
+        <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="group text-gray-200 hover:text-purple-600">
           <span class="sr-only">{{ item.name }}</span>
-          <component :is="item.icon" :class="['h-6 w-6 hover:scale-150 transition', item.color ]" aria-hidden="true" />
+          <component :is="item.icon" :class="['h-6 w-6 transition hover:scale-150', item.color]" aria-hidden="true" />
         </a>
       </div>
       <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
@@ -19,10 +19,11 @@
 
 <script setup lang="tsx">
 import { defineComponent } from 'vue'
-
 const navigation = {
   main: [
-    // { name: 'About', href: '#' },
+    { name: 'Home', to: { name: 'home' } },
+    { name: 'Terms & Conditions', to: { name: 'terms-of-service' } },
+    { name: 'Contact Us', to: { name: 'contact-us' } }
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },

@@ -1,4 +1,6 @@
 import defaultTheme from "tailwindcss/defaultTheme"
+import TailwindProse from '@tailwindcss/typography'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'selector',
@@ -15,9 +17,16 @@ export default {
         indigo: {
           1000: '#06050f'
         }
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.gray.300'),
+          }
+        }
+      })
     },
   },
-  plugins: [],
+  plugins: [TailwindProse],
 }
 
