@@ -1,10 +1,15 @@
 <template>
   <footer class="bg-indigo-1000">
     <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-      <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-        <div v-for="item in navigation.main" :key="item.name" class="pb-6">
-          <RouterLink :to="item.to" class="text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }} </RouterLink>
-        </div>
+      <nav class="columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+        <template v-for="item in navigation.main" :key="item.name">
+          <template v-if="item.href">
+            <a :href="item.href" class="text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }} </a>
+          </template>
+          <template v-else>
+            <RouterLink :to="item.to" class="text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }} </RouterLink>
+          </template>
+        </template>
       </nav>
       <div class="mt-10 flex justify-center space-x-10">
         <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="group text-gray-200 hover:text-purple-600">
@@ -23,7 +28,8 @@ const navigation = {
   main: [
     { name: 'Home', to: { name: 'home' } },
     { name: 'Terms & Conditions', to: { name: 'terms-of-service' } },
-    { name: 'Contact Us', to: { name: 'contact-us' } }
+    { name: 'Contact Us', to: { name: 'contact-us' } },
+    { name: 'Manage Membership', href: 'https://billing.stripe.com/p/login/test_3cs7vS2Akae24BGbII' }
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },

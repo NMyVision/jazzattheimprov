@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-10 mb-8 bg-indigo-1000 dark:bg-black">
+  <header class="sticky top-0 z-10 h-20 bg-indigo-1000 dark:bg-black">
     <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="/" class="-m-1.5 p-1.5">
@@ -41,7 +41,7 @@
               <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-500 hover:bg-gray-900">{{ item.name }}</a>
             </div>
             <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-500 hover:bg-gray-900">Log in</a>
+              <a href="https://billing.stripe.com/p/login/bIYeYK4li9ADfEAaEE" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-500 hover:bg-gray-900">Manage Membership</a>
             </div>
           </div>
         </div>
