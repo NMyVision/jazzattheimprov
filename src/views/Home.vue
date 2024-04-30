@@ -15,12 +15,7 @@ import Subscriptions from './partials/Subscriptions.vue'
 <template>
   <Video />
   <Mission />
-  <section class="flex items-center bg-black sm:h-96 pb-20">
-    <div class="wrapper mx-auto max-w-screen-xl p-10 md:p-20">
-      <h3 class="mb-2 text-2xl font-bold uppercase text-white">Memberships</h3>
-      <Subscriptions />
-    </div>
-  </section>
+  <Subscriptions />
   <Upcoming />
   <Carousel />
   <LatestVideos />

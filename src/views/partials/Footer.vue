@@ -6,7 +6,7 @@
           <template v-if="item.href">
             <a :href="item.href" class="text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }} </a>
           </template>
-          <template v-else>
+          <template v-else-if="item.to">
             <RouterLink :to="item.to" class="text-sm leading-6 text-gray-400 hover:text-gray-300">{{ item.name }} </RouterLink>
           </template>
         </template>
@@ -24,12 +24,13 @@
 
 <script setup lang="tsx">
 import { defineComponent } from 'vue'
+import Settings from '@/global'
 const navigation = {
   main: [
     { name: 'Home', to: { name: 'home' } },
     { name: 'Terms & Conditions', to: { name: 'terms-of-service' } },
     { name: 'Contact Us', to: { name: 'contact-us' } },
-    { name: 'Manage Membership', href: 'https://billing.stripe.com/p/login/test_3cs7vS2Akae24BGbII' }
+    { name: 'Manage Membership', href: Settings.CUSTOMER_PORTAL }
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },
