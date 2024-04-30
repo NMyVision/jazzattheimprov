@@ -100,7 +100,7 @@ const onSubmit = async (e: Event) => {
               <button type="button" @click="navigate" to="/" class="text-sm text-white">Cancel</button>
             </RouterLink>
 
-            <button type="submit" :disabled="isLoading" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 hover:disabled:bg-indigo-500">
+            <button type="submit" :disabled="isLoading" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 hover:disabled:bg-gray-500">
               {{ isLoading ? 'Sending...' : isError ? 'Error!' : 'Send message' }}
             </button>
           </div>
