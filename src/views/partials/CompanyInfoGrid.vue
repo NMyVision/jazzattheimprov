@@ -21,7 +21,7 @@ const PhoneIcon = (
 </script>
 
 <template>
-  <div class="flex gap-x-4">
+  <div class="flex gap-x-4" v-if="false">
     <dt class="flex-none">
       <span class="sr-only">Address</span>
       <BuildingOffice2Icon class="h-7 w-6 text-gray-400" aria-hidden="true" />
