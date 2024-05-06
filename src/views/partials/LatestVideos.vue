@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import Carousel from 'primevue/carousel'
-// type Props = { }
-// const { } = defineProps<Props>()
-// const emits = defineEmits()
-const videos = ['BikqoEpgt7w?si=ygB9CFhuMHyzetd6', 'v7gPUHqLEvg?si=JOUwKjdwhADAyow6', 'P6ltgDqFytU?si=IIhAkJHZUQGzm6FC', '_tXqBNuDcyk?si=HT5tGcWVQEi-e9JU', 'iBUmtR9YcTo?si=VUk_h8ATKOhc5-tl', 'Ql1fZphvOVE?si=e6Z0uDKIqzv9n0Nx']
+
+const videos = ['P6ltgDqFytU?si=IIhAkJHZUQGzm6FC' /* 4/15 */, 'v7gPUHqLEvg?si=JOUwKjdwhADAyow6' /* 3/20 */, 'fenZmDl3YGU?si=bTco1sqTtJCwiTCt' /* 2/15 */, 'jOLayAPuPQg?si=GLmK1uzUSMUFdoED' /* 1/17 */, 'QgmKb2sR_pc?si=5Zys3ibUUX6R9wKx' /* 12/20 */, '-H9wWuI0-38?si=ed9YThsRz9kqrYjc' /* 11/16 */, 'cyltpaGwFhM?si=D6dFeMPvQdcrKWCd' /* 10/18 */]
 
 const responsiveOptions = ref([
   {
