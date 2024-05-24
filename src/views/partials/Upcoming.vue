@@ -7,6 +7,7 @@ import VimeoVideoPlayer from '@/components/VimeoVideoPlayer.vue'
 
 type ConcertType = {
   name: string
+  additional?: { label: string; name: string }
   date: string
   image: string
   css: string
@@ -38,9 +39,14 @@ const data: ConcertType[] = [
   },
   {
     name: 'Bob Baldwin',
+    additional: {
+      label: 'w/ Special guest',
+      name: 'Marcus Anderson'
+    },
     date: 'June 19, 2024',
     image: '/BobBaldwin_20240619.jpg',
-    css: 'order-1'
+    css: 'order-1',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+bob+baldwin+with+special+guest+marcu+anderson/13543344/'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
   },
@@ -48,7 +54,8 @@ const data: ConcertType[] = [
     name: 'Najee',
     date: 'July 17, 2024',
     image: '/NAJEE_20240717.jpg',
-    css: 'order-1'
+    css: 'order-1',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+najee/13543364/'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
   },
@@ -114,7 +121,13 @@ const currentItem = ref<ConcertType>()
           <div class="space-y-4 text-xl text-indigo-700 md:w-3/5">
             <!-- <p class="text-sm uppercase">upcoming concert</p> -->
 
-            <h2 class="bg-white bg-clip-text text-7xl font-light text-transparent">{{ item.name }}</h2>
+            <h2 class="text-7xl font-light text-transparent text-white">{{ item.name }}</h2>
+            <template v-if="item.additional">
+              <h3 class="font-light text-transparent text-zinc-100">
+                <p class="text-zinc-400">{{ item.additional.label }}</p>
+                <p class="text-4xl">{{ item.additional.name }}</p>
+              </h3>
+            </template>
             <p class="text-yellow-500">
               {{ item.date }}<br />
               {{ configuration.location }}
@@ -144,9 +157,9 @@ const currentItem = ref<ConcertType>()
   <section class="bg-black">
     <div class="wrapper mx-auto w-full max-w-screen-xl p-10 md:p-20">
       <h3 class="mb-4 text-lg">Upcoming Shows</h3>
-      <div class="inline-grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.36)),1fr))]" >
+      <div class="inline-grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.36)),1fr))]">
         <template v-for="item in take(filteredData, 10, configuration.deck)" :key="item.name">
-          <section :class="currentItem?.date == item.date && 'flex flex-col gap-8 bg-indigo-1000 p-10 col-span-2'">
+          <section :class="currentItem?.date == item.date && 'col-span-2 flex flex-col gap-8 bg-indigo-1000 p-10'">
             <div class="h-80" @mousedown="select(item)">
               <img :src="item.image" :alt="item.name" :class="['aspect-[3/1] h-full w-full object-contain', currentItem && item.date === currentItem.date ? '' : 'grayscale hover:grayscale-0']" />
             </div>
@@ -156,7 +169,7 @@ const currentItem = ref<ConcertType>()
                   <div class="space-y-4 text-xl text-indigo-700 md:w-3/5">
                     <!-- <p class="text-sm uppercase">upcoming concert</p> -->
 
-                    <h2 class="text-white text-5xl font-light text-transparent">{{ item.name }}</h2>
+                    <h2 class="text-5xl font-light text-transparent text-white">{{ item.name }}</h2>
                     <p class="text-yellow-500">{{ item.date }}<br /></p>
                     <p class=""></p>
                     <div class="pt-6">
