@@ -16,7 +16,7 @@ type ConcertType = {
 }
 
 const configuration = {
-  deck: 1,
+  deck: 2,
   location: '1224 Parkside Main Street Cary, NC 27519',
   date: new Date()
 }
@@ -45,7 +45,7 @@ const data: ConcertType[] = [
     },
     date: 'June 19, 2024',
     image: '/BobBaldwin_20240619.jpg',
-    css: 'order-1',
+    css: '',
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+bob+baldwin+with+special+guest+marcu+anderson/13543344/'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
