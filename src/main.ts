@@ -2,7 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import PrimeVue from "primevue/config"
+import PrimeVue from 'primevue/config'
 import PrimeOne from 'primevue/themes/primeone'
 import Aura from 'primevue/themes/primeone/aura'
 
@@ -23,6 +23,6 @@ app.use(PrimeVue, {
       cssLayer: false
     }
   }
-});
+})
 
 app.mount('#app')

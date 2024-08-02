@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import Sponsors from './partials/Sponsors.vue'
 import Video from './partials/Video.vue'
 import Carousel from './partials/Carousel.vue'
@@ -19,5 +18,4 @@ import Upcoming from './partials/Upcoming.vue'
   <Carousel />
   <LatestVideos />
   <Sponsors />
-  
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VimeoVideoPlayer from '@/components/VimeoVideoPlayer.vue';
+import VimeoVideoPlayer from '@/components/VimeoVideoPlayer.vue'
 </script>
 <template>
   <div class="flex-1">
