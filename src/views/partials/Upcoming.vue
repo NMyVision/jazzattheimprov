@@ -63,7 +63,8 @@ const data: ConcertType[] = [
     name: 'Jonathan Butler',
     date: 'Aug 28, 2024',
     image: '/JonathanButler_20240828.jpg',
-    css: 'order-1'
+    css: 'order-1',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+jonathan+butler/13778453/'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
   },
@@ -71,7 +72,8 @@ const data: ConcertType[] = [
     name: 'Mike Phillips',
     date: 'Sept 18, 2024',
     image: '/MikePhillips_20240918.jpg',
-    css: 'order-1'
+    css: '',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+mike+phillips/13778463/'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
   },
