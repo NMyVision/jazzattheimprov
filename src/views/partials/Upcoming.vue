@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import VimeoVideoPlayer from '@/components/VimeoVideoPlayer.vue'
+import AudioPlayer from '@/components/AudioPlayer.vue'
 
 // type Props = { }
 // const { } = defineProps<Props>()
@@ -13,6 +14,7 @@ type ConcertType = {
   css: string
   link?: string
   video?: { type: 'vimeo' | 'youtube'; id: string | number }
+  audio?: { type: 'mp3'; source: string }
 }
 
 const configuration = {
@@ -73,7 +75,11 @@ const data: ConcertType[] = [
     date: 'Sept 18, 2024',
     image: '/MikePhillips_20240918.jpg',
     css: '',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+mike+phillips/13778463/'
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+mike+phillips/13778463/',
+    audio: {
+      type: 'mp3',
+      source: '/mike-phillips-promo.mp3'
+    }
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
   },
@@ -135,12 +141,20 @@ const currentItem = ref<ConcertType>()
               {{ configuration.location }}
             </p>
             <p class=""></p>
-            <div class="pt-6">
+            <div class="flex gap-4 pt-6">
               <template v-if="item.link">
-                <a :href="item.link" target="_blank" class="block w-full rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 md:inline-block md:w-auto">Buy Ticket</a>
+                <div>
+                  <a :href="item.link" target="_blank" class="block w-full rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 md:inline-block md:w-auto">Buy Ticket</a>
+                </div>
               </template>
               <template v-else>
-                <span class="block w-fit rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Coming Soon</span>
+                <div>
+                  <span class="block w-fit rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Coming Soon</span>
+                </div>
+              </template>
+
+              <template v-if="item.audio">
+                <AudioPlayer :source="item.audio.source" />
               </template>
             </div>
             <div class="mt-8" v-if="item.video">
