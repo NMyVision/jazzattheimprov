@@ -87,6 +87,7 @@ const data: ConcertType[] = [
     name: 'Gerald Albright',
     date: 'Oct 16, 2024',
     image: '/GeraldAlbright_20241016.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+gerald+albright/13778473/',
     css: 'order-1'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
