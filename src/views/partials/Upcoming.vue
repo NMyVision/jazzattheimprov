@@ -18,7 +18,7 @@ type ConcertType = {
 }
 
 const configuration = {
-  deck: 2,
+  deck: 0,
   location: '1224 Parkside Main Street Cary, NC 27519',
   date: new Date()
 }
@@ -91,7 +91,23 @@ const data: ConcertType[] = [
     css: 'order-1'
     //videoId: { type: 'vimeo', video: 937110802 }
     //video: { type: 'youtube', id: 937110802 }
+  },
+  {
+    name: 'Eric Roberson',
+    date: 'Nov 20, 2024',
+    image: '/eric-roberson_20241120.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+eric+roberson/13615964/',
+    css: ''
+    //videoId: { type: 'vimeo', video: 937110802 }
+    //video: { type: 'youtube', id: 937110802 }
   }
+  // {
+  //   name: 'Kirk Whalum',
+  //   date: 'Dec 18, 2024',
+  //   image: '/eric-roberson_20241120.jpg',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3akirk+whalum/13615974/',
+  //   css: 'order-1'
+  // }
 ]
 
 const filteredData = computed(() => {
@@ -121,7 +137,7 @@ const currentItem = ref<ConcertType>()
 
 <template>
   <div class="flex flex-1 flex-col gap-8 p-10">
-    <template v-for="item in take(filteredData, configuration.deck)" :key="item.name">
+    <template v-for="item in take(filteredData, Math.max(configuration.deck,1))" :key="item.name">
       <div class="flex justify-center gap-8">
         <div class="mx-auto flex flex-col gap-10 md:flex-row">
           <div :class="['md:w-2/5', item.css]">
@@ -171,11 +187,11 @@ const currentItem = ref<ConcertType>()
       </div>
     </template>
   </div>
-  <section class="bg-black">
+  <section class="bg-black" v-if="configuration.deck > 0 && filteredData.length > 1">
     <div class="wrapper mx-auto w-full max-w-screen-xl p-10 md:p-20">
       <h3 class="mb-4 text-lg">Upcoming Shows</h3>
       <div class="inline-grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.36)),1fr))]">
-        <template v-for="item in take(filteredData, 10, configuration.deck)" :key="item.name">
+        <template v-for="item in take(filteredData, 10,  Math.max(configuration.deck,1))" :key="item.name">
           <section :class="currentItem?.date == item.date && 'col-span-2 flex flex-col gap-8 bg-indigo-1000 p-10'">
             <div class="h-80" @mousedown="select(item)">
               <img :src="item.image" :alt="item.name" :class="['aspect-[3/1] h-full w-full object-contain', currentItem && item.date === currentItem.date ? '' : 'grayscale hover:grayscale-0']" />
