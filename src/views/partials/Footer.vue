@@ -73,7 +73,7 @@ const navigation = {
 
     {
       name: 'YouTube',
-      href: 'https://www.youtube.com/@SmoothJazzattheImprovPresents',
+      href: 'https://www.youtube.com/@SmoothJazzattheImprovPresents/videos',
       color: 'hover:text-[#ff0000]',
       icon: defineComponent({
         render: () => (
