@@ -18,104 +18,128 @@ type ConcertType = {
 }
 
 const configuration = {
-  deck: 0,
+  deck: 1,
   location: '1224 Parkside Main Street Cary, NC 27519',
   date: new Date()
 }
 
 const data: ConcertType[] = [
-  {
-    name: 'Rick Braun',
-    date: 'April 17, 2024',
-    image: '/RickBraun_20240417.jpeg',
-    css: 'order-1',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+rick+braun/13518773/'
-  },
-  {
-    name: 'Pieces of a Dream',
-    date: 'May 15, 2024',
-    image: '/PiecesOfADream_20240515.jpeg',
-    css: 'order-1',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/13412154/',
-    video: { type: 'vimeo', id: 937110802 }
-  },
-  {
-    name: 'Bob Baldwin',
-    additional: {
-      label: 'w/ Special guest',
-      name: 'Marcus Anderson'
-    },
-    date: 'June 19, 2024',
-    image: '/BobBaldwin_20240619.jpg',
-    css: '',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+bob+baldwin+with+special+guest+marcu+anderson/13543344/'
-    //videoId: { type: 'vimeo', video: 937110802 }
-    //video: { type: 'youtube', id: 937110802 }
-  },
-  {
-    name: 'Najee',
-    date: 'July 17, 2024',
-    image: '/NAJEE_20240717.jpg',
-    css: 'order-1',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+najee/13543364/'
-    //videoId: { type: 'vimeo', video: 937110802 }
-    //video: { type: 'youtube', id: 937110802 }
-  },
-  {
-    name: 'Jonathan Butler',
-    date: 'Aug 28, 2024',
-    image: '/JonathanButler_20240828.jpg',
-    css: 'order-1',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+jonathan+butler/13778453/'
-    //videoId: { type: 'vimeo', video: 937110802 }
-    //video: { type: 'youtube', id: 937110802 }
-  },
-  {
-    name: 'Mike Phillips',
-    date: 'Sept 18, 2024',
-    image: '/MikePhillips_20240918.jpg',
-    css: '',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+mike+phillips/13778463/',
-    audio: {
-      type: 'mp3',
-      source: '/mike-phillips-promo.mp3'
-    }
-    //videoId: { type: 'vimeo', video: 937110802 }
-    //video: { type: 'youtube', id: 937110802 }
-  },
-  {
-    name: 'Gerald Albright',
-    date: 'Oct 16, 2024',
-    image: '/GeraldAlbright_20241016.jpg',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+gerald+albright/13778473/',
-    css: 'order-1'
-    //videoId: { type: 'vimeo', video: 937110802 }
-    //video: { type: 'youtube', id: 937110802 }
-  },
-  {
-    name: 'Eric Roberson',
-    date: 'Nov 20, 2024',
-    image: '/eric-roberson_20241120.jpg',
-    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+eric+roberson/13615964/',
-    css: ''
-    //videoId: { type: 'vimeo', video: 937110802 }
-    //video: { type: 'youtube', id: 937110802 }
-  }
   // {
-  //   name: 'Kirk Whalum',
-  //   date: 'Dec 18, 2024',
-  //   image: '/eric-roberson_20241120.jpg',
-  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3akirk+whalum/13615974/',
+  //   name: 'Rick Braun',
+  //   date: 'April 17, 2024',
+  //   image: '/events/2024/RickBraun_20240417.jpeg',
+  //   css: 'order-1',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+rick+braun/13518773/'
+  // },
+  // {
+  //   name: 'Pieces of a Dream',
+  //   date: 'May 15, 2024',
+  //   image: '/events/2024/PiecesOfADream_20240515.jpeg',
+  //   css: 'order-1',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/13412154/',
+  //   video: { type: 'vimeo', id: 937110802 }
+  // },
+  // {
+  //   name: 'Bob Baldwin',
+  //   additional: {
+  //     label: 'w/ Special guest',
+  //     name: 'Marcus Anderson'
+  //   },
+  //   date: 'June 19, 2024',
+  //   image: '/events/2024/BobBaldwin_20240619.jpg',
+  //   css: '',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+bob+baldwin+with+special+guest+marcu+anderson/13543344/'
+  //   //videoId: { type: 'vimeo', video: 937110802 }
+  //   //video: { type: 'youtube', id: 937110802 }
+  // },
+  // {
+  //   name: 'Najee',
+  //   date: 'July 17, 2024',
+  //   image: '/events/2024/NAJEE_20240717.jpg',
+  //   css: 'order-1',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+najee/13543364/'
+  //   //videoId: { type: 'vimeo', video: 937110802 }
+  //   //video: { type: 'youtube', id: 937110802 }
+  // },
+  // {
+  //   name: 'Jonathan Butler',
+  //   date: 'Aug 28, 2024',
+  //   image: '/events/2024/JonathanButler_20240828.jpg',
+  //   css: 'order-1',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+jonathan+butler/13778453/'
+  //   //videoId: { type: 'vimeo', video: 937110802 }
+  //   //video: { type: 'youtube', id: 937110802 }
+  // },
+  // {
+  //   name: 'Mike Phillips',
+  //   date: 'Sept 18, 2024',
+  //   image: '/events/2024/MikePhillips_20240918.jpg',
+  //   css: '',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+mike+phillips/13778463/',
+  //   audio: {
+  //     type: 'mp3',
+  //     source: '/mike-phillips-promo.mp3'
+  //   }
+  //   //videoId: { type: 'vimeo', video: 937110802 }
+  //   //video: { type: 'youtube', id: 937110802 }
+  // },
+  // {
+  //   name: 'Gerald Albright',
+  //   date: 'Oct 16, 2024',
+  //   image: '/events/2024/GeraldAlbright_20241016.jpg',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+gerald+albright/13778473/',
   //   css: 'order-1'
-  // }
-]
+  //   //videoId: { type: 'vimeo', video: 937110802 }
+  //   //video: { type: 'youtube', id: 937110802 }
+  // },
+  // {
+  //   name: 'Eric Roberson',
+  //   date: 'Nov 20, 2024',
+  //   image: '/events/2024/eric-roberson_20241120.jpg',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+eric+roberson/13615964/',
+  //   css: ''
+  //   //videoId: { type: 'vimeo', video: 937110802 }
+  //   //video: { type: 'youtube', id: 937110802 }
+  // },
+  {
+    name: 'Kirk Whalum',
+    date: 'Dec 18, 2024',
+    image: '/events/2024/KirkWhalum_20241218.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3akirk+whalum/13615974/',
+    css: 'order-1'
+  },
+  {
+    name: 'Nicholas Cole',
+    date: 'Jan 22, 2025',
+    image: '/events/2025/NicholasCole_20250122.jpg',
+    css: ''
+  },
+  {
+    name: 'Marion Meadows',
+    date: 'Feb 26, 2025',
+    image: '/events/2025/MarionMeadows_20250226.jpg',
+    css: 'order-1'
+  },
+  {
+    name: 'MarcusAnderson',
+    date: 'April 23, 2025',
+    image: '/events/2025/MarcusAnderson_20250423.jpg',
+    css: ''
+  },
+   {
+    name: 'Julian Vaughn',
+    date: 'May 28, 2025',
+    image: '/events/2025/JulianVaughn_20250528.jpg',
+    css: 'order-1'
+  }
+];
 
 const filteredData = computed(() => {
   return data
-    .map((item, index) => {
+  .map((item, index) => {
       return {
         ...item,
-        hasPassed: new Date(item.date) < new Date(configuration.date),
+        hasPassed: new Date(item.date) < configuration.date,
         index
       }
     })
