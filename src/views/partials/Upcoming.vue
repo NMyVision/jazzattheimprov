@@ -112,13 +112,21 @@ const data: ConcertType[] = [
     name: 'Nicholas Cole',
     date: 'Jan 22, 2025',
     image: '/events/2025/NicholasCole_20250122.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+nicholas+cole/14100493/',
     css: ''
   },
   {
     name: 'Marion Meadows',
     date: 'Feb 26, 2025',
     image: '/events/2025/MarionMeadows_20250226.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+marion+meadows/14104273/',
     css: 'order-1'
+  },
+  {
+    name: 'Will Downing',
+    date: 'March 26, 2025',
+    image: '/events/2025/WillDowning_20250326.jpeg',
+    css: ''
   },
   {
     name: 'MarcusAnderson',
