@@ -126,25 +126,28 @@ const data: ConcertType[] = [
     name: 'Will Downing',
     date: 'March 26, 2025',
     image: '/events/2025/WillDowning_20250326.jpeg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+will+downing/13690434/',
     css: ''
   },
   {
     name: 'MarcusAnderson',
     date: 'April 23, 2025',
     image: '/events/2025/MarcusAnderson_20250423.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+marcus+anderson/13690564/',
     css: ''
   },
-   {
+  {
     name: 'Julian Vaughn',
     date: 'May 28, 2025',
     image: '/events/2025/JulianVaughn_20250528.jpg',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+julian+vaughn/13690594/',
     css: 'order-1'
   }
-];
+]
 
 const filteredData = computed(() => {
   return data
-  .map((item, index) => {
+    .map((item, index) => {
       return {
         ...item,
         hasPassed: new Date(item.date) < configuration.date,
@@ -169,7 +172,7 @@ const currentItem = ref<ConcertType>()
 
 <template>
   <div class="flex flex-1 flex-col gap-8 p-10">
-    <template v-for="item in take(filteredData, Math.max(configuration.deck,1))" :key="item.name">
+    <template v-for="item in take(filteredData, Math.max(configuration.deck, 1))" :key="item.name">
       <div class="flex justify-center gap-8">
         <div class="mx-auto flex flex-col gap-10 md:flex-row">
           <div :class="['md:w-2/5', item.css]">
@@ -223,7 +226,7 @@ const currentItem = ref<ConcertType>()
     <div class="wrapper mx-auto w-full max-w-screen-xl p-10 md:p-20">
       <h3 class="mb-4 text-lg">Upcoming Shows</h3>
       <div class="inline-grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(min(100%,theme(spacing.36)),1fr))]">
-        <template v-for="item in take(filteredData, 10,  Math.max(configuration.deck,1))" :key="item.name">
+        <template v-for="item in take(filteredData, 10, Math.max(configuration.deck, 1))" :key="item.name">
           <section :class="currentItem?.date == item.date && 'col-span-2 flex flex-col gap-8 bg-indigo-1000 p-10'">
             <div class="h-80" @mousedown="select(item)">
               <img :src="item.image" :alt="item.name" :class="['aspect-[3/1] h-full w-full object-contain', currentItem && item.date === currentItem.date ? '' : 'grayscale hover:grayscale-0']" />
