@@ -18,7 +18,7 @@ type ConcertType = {
 }
 
 const configuration = {
-  deck: 1,
+  deck: 2,
   location: '1224 Parkside Main Street Cary, NC 27519',
   date: new Date()
 }
@@ -130,6 +130,13 @@ const data: ConcertType[] = [
     css: ''
   },
   {
+    name: 'Will Downing',
+    date: 'March 27, 2025',
+    image: '/events/2025/WillDowning_20250327.jpeg',
+    link: 'https://buy.stripe.com/cN28zy1ZU8GQ4Du7tJ',
+    css: 'order-1'
+  },
+  {
     name: 'MarcusAnderson',
     date: 'April 23, 2025',
     image: '/events/2025/MarcusAnderson_20250423.jpg',
@@ -142,6 +149,12 @@ const data: ConcertType[] = [
     image: '/events/2025/JulianVaughn_20250528.jpg',
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+julian+vaughn/13690594/',
     css: 'order-1'
+  },
+  {
+    name: 'Chrisette Michele',
+    date: 'June 25, 2025',
+    image: '/events/2025/ChrisetteMichele_20250625.jpg',
+    css: ''
   }
 ]
 
