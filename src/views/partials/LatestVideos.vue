@@ -49,7 +49,14 @@ const responsiveOptions = ref([
   <section class="">
     <div class="wrapper relative isolate p-4 md:p-20">
       <div class="absolute inset-0 -z-10 bg-gradient-to-t from-indigo-1000 to-black"></div>
-      <h3 class="mb-2 text-2xl font-bold uppercase text-white">Latest Videos</h3>
+      <div class="flex flex-row justify-between items-center mb-8">
+
+        <h3 class="mb-2 text-2xl font-bold uppercase text-white">Latest Videos</h3>
+
+        <div>
+          <a href="https://www.youtube.com/@SmoothJazzattheImprovPresents/videos" target="_blank" class="text-sm rounded-full hover:bg-red-600 text-white/80 font-semibold px-4 py-1 grow-0 flex-0">View All on YouTube</a>
+        </div>
+      </div>
 
       <Carousel :value="videos" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
         <template #item="slotProps">
