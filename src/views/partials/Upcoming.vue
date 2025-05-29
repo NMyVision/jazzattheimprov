@@ -154,8 +154,16 @@ const data: ConcertType[] = [
     name: 'Chrisette Michele',
     date: 'June 25, 2025',
     image: '/events/2025/ChrisetteMichele_20250625.jpg',
-    css: ''
+    css: '',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+chrisette+michele/14451583/'
   }
+  // {
+  //   name: 'David Benoit',
+  //   date: 'July 23, 2025',
+  //   image: '',
+  //   css: '',
+  //   link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+david+benoit/14451593/'
+  // }
 ]
 
 const filteredData = computed(() => {
