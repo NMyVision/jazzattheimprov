@@ -2,6 +2,7 @@
 import Carousel from 'primevue/carousel'
 
 const videos = [
+  '0AMJkVLVJpw' /* 2025/05/28 */,
   'C6yB5CFstn4' /* 2025/04/23 */,
   'tZS3xVnRW28' /* 2025/03/26 */,
   'By-3uYmJpgg' /* 2025/02/26 */,

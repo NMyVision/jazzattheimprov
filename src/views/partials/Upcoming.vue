@@ -163,7 +163,18 @@ const data: ConcertType[] = [
     image: '/events/2025/DavidBenoit20250723.jpg',
     css: 'order-1',
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+david+benoit/14451593/'
-  }
+  },
+  {
+    name: 'Shaun LaBelle',
+    date: 'August 27, 2025',
+    image: '/events/2025/ShaunLaBelle_20250827.jpg',
+    css: 'order-1',
+    additional: {
+      label: 'featuring',
+      name: 'Bobby Lyle & Stokely'
+    },
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+shaun+labelle+featuring+bobby+lyle+%26+stokely/13891434/'
+  },
 ]
 
 const filteredData = computed(() => {
