@@ -171,7 +171,7 @@ const data: ConcertType[] = [
     css: 'order-1',
     additional: {
       label: 'featuring',
-      name: 'Bobby Lyle & Stokely'
+      name: 'Bobby Lyle & Stokley'
     },
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+shaun+labelle+featuring+bobby+lyle+%26+stokely/13891434/'
   },
