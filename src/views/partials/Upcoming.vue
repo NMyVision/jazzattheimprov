@@ -17,10 +17,13 @@ type ConcertType = {
   audio?: { type: 'mp3'; source: string }
 }
 
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() - 1);
 const configuration = {
   deck: 2,
   location: '1224 Parkside Main Street Cary, NC 27519',
-  date: new Date()
+  date: tomorrow
 }
 
 const data: ConcertType[] = [
@@ -183,7 +186,7 @@ const filteredData = computed(() => {
       return {
         ...item,
         hasPassed: new Date(item.date) < configuration.date,
-        index
+        index,
       }
     })
     .filter((x) => x.hasPassed === false)
