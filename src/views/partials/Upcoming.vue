@@ -178,6 +178,31 @@ const data: ConcertType[] = [
     },
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+shaun+labelle+featuring+bobby+lyle+%26+stokely/13891434/'
   },
+
+
+  {
+    name: 'Eric Darius',
+    date: 'October 22, 2025', //_20251022
+    image: '/events/2025/EricDarius_20251022p.jpg',
+    css: 'order-1',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+eric+darius/14568913/'
+  },
+
+  {
+    name: 'Kevin Ross',
+    date: 'October 29, 2025', //_20251029
+    image: '/events/2025/KevinRoss_20251029p.jpg',
+    css: '',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+kevin+ross/14568943/'
+  },
+  {
+     name: 'Adam Hawley',
+     date: 'November 19, 2025', //_20251119
+     image: '/events/2025/AdamHawley_20251119p.jpg',
+     css: 'order-1',
+     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+adam+hawley/14568973/'
+   },
+
 ]
 
 const filteredData = computed(() => {
