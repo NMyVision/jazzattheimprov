@@ -196,13 +196,24 @@ const data: ConcertType[] = [
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+kevin+ross/14568943/'
   },
   // {
-  //    name: 'Adam Hawley',
-  //    date: 'November 19, 2025', //_20251119
-  //    image: '/events/2025/AdamHawley_20251119p.jpg',
-  //    css: 'order-1',
-  //    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+adam+hawley/14568973/'
-  //  },
+    //    name: 'Adam Hawley',
+    //    date: 'November 19, 2025', //_20251119
+    //    image: '/events/2025/AdamHawley_20251119p.jpg',
+    //    css: 'order-1',
+    //    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+adam+hawley/14568973/'
+    //  },
 
+    {
+      name: 'Nicholas Cole',
+      date: 'December 17, 2025', //_20251229
+      image: '/events/2025/NicholasCole_20251217.png',
+      css: '',
+     additional: {
+      label: 'featuring',
+      name: 'Jazmin Ghent'
+    },
+
+    },
 ]
 
 const filteredData = computed(() => {
