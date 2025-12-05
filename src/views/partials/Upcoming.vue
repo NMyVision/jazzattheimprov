@@ -210,8 +210,9 @@ const data: ConcertType[] = [
       css: '',
      additional: {
       label: 'featuring',
-      name: 'Jazmin Ghent'
+      name: 'Jazmin Ghent',
     },
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+nicholas+cole+featuring+jazmin+ghent/13972994/'
 
     },
 ]
