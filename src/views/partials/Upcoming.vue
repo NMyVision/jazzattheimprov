@@ -17,9 +17,9 @@ type ConcertType = {
   audio?: { type: 'mp3'; source: string }
 }
 
-const today = new Date();
-const tomorrow = new Date(today);
-tomorrow.setDate(today.getDate() - 1);
+const today = new Date()
+const tomorrow = new Date(today)
+tomorrow.setDate(today.getDate() - 1)
 const configuration = {
   deck: 2,
   location: '1224 Parkside Main Street Cary, NC 27519',
@@ -179,7 +179,6 @@ const data: ConcertType[] = [
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+shaun+labelle+featuring+bobby+lyle+%26+stokely/13891434/'
   },
 
-
   // {
   //   name: 'Eric Darius',
   //   date: 'October 22, 2025', //_20251022
@@ -196,25 +195,24 @@ const data: ConcertType[] = [
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+kevin+ross/14568943/'
   },
   // {
-    //    name: 'Adam Hawley',
-    //    date: 'November 19, 2025', //_20251119
-    //    image: '/events/2025/AdamHawley_20251119p.jpg',
-    //    css: 'order-1',
-    //    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+adam+hawley/14568973/'
-    //  },
+  //    name: 'Adam Hawley',
+  //    date: 'November 19, 2025', //_20251119
+  //    image: '/events/2025/AdamHawley_20251119p.jpg',
+  //    css: 'order-1',
+  //    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+adam+hawley/14568973/'
+  //  },
 
-    {
-      name: 'Nicholas Cole',
-      date: 'December 17, 2025', //_20251229
-      image: '/events/2025/NicholasCole_20251217.png',
-      css: '',
-     additional: {
+  {
+    name: 'Nicholas Cole',
+    date: 'December 17, 2025', //_20251229
+    image: '/events/2025/NicholasCole_20251217.png',
+    css: '',
+    additional: {
       label: 'featuring',
-      name: 'Jazmin Ghent',
+      name: 'Jazmin Ghent'
     },
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+nicholas+cole+featuring+jazmin+ghent/13972994/'
-
-    },
+  },
 
   {
     name: 'Gerald Albright',
@@ -231,7 +229,7 @@ const data: ConcertType[] = [
     image: '/events/2026/PiecesOfADream_20260617.png',
     css: 'order-1',
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/14866503/'
-  },
+  }
 ]
 
 const filteredData = computed(() => {
@@ -240,7 +238,7 @@ const filteredData = computed(() => {
       return {
         ...item,
         hasPassed: new Date(item.date) < configuration.date,
-        index,
+        index
       }
     })
     .filter((x) => x.hasPassed === false)
@@ -267,44 +265,45 @@ const currentItem = ref<ConcertType>()
           <div :class="['md:w-2/5', item.css]">
             <img :src="item.image" :alt="item.name" class="mx-auto h-full w-full max-w-screen-sm object-cover" />
           </div>
-          <div class="space-y-4 text-xl text-indigo-700 md:w-3/5">
+          <div class="flex items-center space-y-4 text-xl text-indigo-700 md:w-3/5">
             <!-- <p class="text-sm uppercase">upcoming concert</p> -->
+            <div>
+              <h2 class="text-7xl font-light text-transparent text-white">{{ item.name }}</h2>
+              <template v-if="item.additional">
+                <h3 class="font-light text-transparent text-zinc-100">
+                  <p class="text-zinc-400">{{ item.additional.label }}</p>
+                  <p class="text-4xl">{{ item.additional.name }}</p>
+                </h3>
+              </template>
+              <p class="text-yellow-500">
+                {{ item.date }} @7:30 PM<br />
+                {{ configuration.location }}
+              </p>
+              <p class=""></p>
+              <div class="flex gap-4 pt-6">
+                <template v-if="item.link">
+                  <div>
+                    <a :href="item.link" target="_blank" class="block w-full rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 md:inline-block md:w-auto">Buy Ticket</a>
+                  </div>
+                </template>
+                <template v-else>
+                  <div>
+                    <span class="block w-fit rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Coming Soon</span>
+                  </div>
+                </template>
 
-            <h2 class="text-7xl font-light text-transparent text-white">{{ item.name }}</h2>
-            <template v-if="item.additional">
-              <h3 class="font-light text-transparent text-zinc-100">
-                <p class="text-zinc-400">{{ item.additional.label }}</p>
-                <p class="text-4xl">{{ item.additional.name }}</p>
-              </h3>
-            </template>
-            <p class="text-yellow-500">
-              {{ item.date }} @7:30 PM<br />
-              {{ configuration.location }}
-            </p>
-            <p class=""></p>
-            <div class="flex gap-4 pt-6">
-              <template v-if="item.link">
-                <div>
-                  <a :href="item.link" target="_blank" class="block w-full rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 md:inline-block md:w-auto">Buy Ticket</a>
-                </div>
-              </template>
-              <template v-else>
-                <div>
-                  <span class="block w-fit rounded-md bg-gradient-to-tr from-indigo-700 to-violet-800 px-20 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Coming Soon</span>
-                </div>
-              </template>
-
-              <template v-if="item.audio">
-                <AudioPlayer :source="item.audio.source" />
-              </template>
-            </div>
-            <div class="mt-8" v-if="item.video">
-              <template v-if="item.video!.type === 'vimeo'">
-                <VimeoVideoPlayer :videoId="item.video!.id" :title="item.name" />
-              </template>
-              <template v-else>
-                <iframe class="aspect-video h-full w-full object-cover object-center" :src="`https://www.youtube.com/embed/${item.video!.id}`" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </template>
+                <template v-if="item.audio">
+                  <AudioPlayer :source="item.audio.source" />
+                </template>
+              </div>
+              <div class="mt-8" v-if="item.video">
+                <template v-if="item.video!.type === 'vimeo'">
+                  <VimeoVideoPlayer :videoId="item.video!.id" :title="item.name" />
+                </template>
+                <template v-else>
+                  <iframe class="aspect-video h-full w-full object-cover object-center" :src="`https://www.youtube.com/embed/${item.video!.id}`" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </template>
+              </div>
             </div>
           </div>
         </div>
