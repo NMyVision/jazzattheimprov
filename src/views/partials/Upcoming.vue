@@ -215,6 +215,23 @@ const data: ConcertType[] = [
     link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+nicholas+cole+featuring+jazmin+ghent/13972994/'
 
     },
+
+  {
+    name: 'Gerald Albright',
+    date: 'May 20, 2026',
+    image: '/events/2026/GeraldAlbright_20260520.png',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+gerald+albright/14866453/',
+    css: ''
+    //videoId: { type: 'vimeo', video: 937110802 }
+    //video: { type: 'youtube', id: 937110802 }
+  },
+  {
+    name: 'Pieces of a Dream',
+    date: 'June 17, 2026',
+    image: '/events/2026/PiecesOfADream_20260617.png',
+    css: 'order-1',
+    link: 'https://improv.com/raleigh/event/smooth+jazz+at+the+improv+presents%3a+pieces+of+a+dream/14866503/'
+  },
 ]
 
 const filteredData = computed(() => {
@@ -261,7 +278,7 @@ const currentItem = ref<ConcertType>()
               </h3>
             </template>
             <p class="text-yellow-500">
-              {{ item.date }}<br />
+              {{ item.date }} @7:30 PM<br />
               {{ configuration.location }}
             </p>
             <p class=""></p>
